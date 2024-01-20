@@ -1,0 +1,140 @@
+/*=======================================================================
+	
+	URL 		    |		www.abuitrago.es
+	
+	Author Name		|		Antonio Buitrago
+	
+-------------------------------------------------------------------------
+	CSS Structure
+-------------------------------------------------------------------------
+	
+	01- Estilos de los elementos básicos.
+    02- Listas
+	
+=======================================================================*/
+
+/*=======================================================================
+	01- Estilos de los elementos básicos.
+=======================================================================*/
+*{
+	margin:0;
+	padding:0;
+	outline:none;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    scroll-behavior: smooth;
+	background-color: var(--bs-white);
+	font-family: "SourceCodePro-Regular";
+}
+
+hr {
+	background-color: #f5b301;
+	height: 7px;
+	border: none;
+	opacity: 1;
+}
+
+p {
+	font-family: "SourceCodePro-Regular";
+	font-size: 1em;
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6{
+	font-family: "SourceCodePro-Bold";
+}
+
+h1, .h1 {
+	font-size: 5rem;
+	line-height: 1.355;
+	letter-spacing: -.1rem;
+}
+@media only screen and (max-width:600px) {
+	h1, .h01 {
+		font-size: 2.6rem;
+		letter-spacing: -.07rem;
+    }
+}
+h2, .h2 {
+	font-size: 2.8rem;
+	line-height: 1.25;
+}
+h3, .h3 {
+	font-size: 2rem;
+	line-height: 1.5;
+    text-transform: uppercase;
+}
+h4, .h4 {
+	font-size: 1.6rem;
+	line-height: 1.765;
+    text-transform: uppercase;
+}
+h5, .h5 {
+	font-size: 1.3rem;
+	line-height: 1.714;
+	text-transform: uppercase;
+	letter-spacing: .15rem;
+}
+h6, .h6 {
+	font-size: 1.2rem;
+	line-height: 1.846;
+	text-transform: uppercase;
+	letter-spacing: .15rem;
+}
+
+/* Links */
+a, a:visited {
+	color: var(--color-primary);
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-webkit-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+a:hover, a:focus, a:active {
+	color: var(--color-secondary);
+	outline: 0;
+}
+
+/*=======================================================================
+	03. Estilos de las Listas.
+=======================================================================*/
+ol {
+	list-style: decimal;
+}
+ul {
+	list-style: none;
+}
+li {
+	display: list-item;
+}
+ol, ul {
+	margin-left: 1.7rem;
+}
+ul li {
+	padding-left: .4rem;
+}
+ul ul, ul ol, ol ol, ol ul {
+	margin: .6rem 0 .6rem 1.7rem;
+}
+ul.disc li {
+	display: list-item;
+	list-style: none;
+	padding: 0 0 0 .8rem;
+	position: relative;
+}
+ul.disc li::before {
+	content: "";
+	display: inline-block;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: var(--color-black);
+	position: absolute;
+	left: -17px;
+	top: 11px;
+	vertical-align: middle;
+}

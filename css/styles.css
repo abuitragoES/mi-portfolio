@@ -1,0 +1,739 @@
+/*=======================================================================
+	
+	URL 		    |		www.abuitrago.es
+	
+	Author Name		|		Antonio Buitrago
+	
+-------------------------------------------------------------------------
+	CSS Structure
+-------------------------------------------------------------------------
+	
+	01- Header Section
+    02- Intro Section
+	03- About Section
+	04- Resume Section
+	05- Portfolio Section
+	06- Contact Section
+	07- Footer Section
+	08- Flecha Subir
+	
+=======================================================================*/
+
+/*=======================================================================
+	01- Header Section
+=======================================================================*/
+.navbar ul li a,
+a:visited {
+	color: var(--bs-white);
+	text-decoration: none;
+	font-size: 1rem;
+	font-weight: 500;
+}
+.navbar ul li a:hover {
+	color: var(--bs-warning);
+}
+.navbar i {
+	font-size: 2rem;
+	color: var(--bs-white);
+}
+.apellido {
+	color: var(--bs-warning);
+	font-weight: bolder;
+}
+.navbar-brand {
+	color: var(--bs-white);
+	font-size: 1.5rem;
+}
+.navbar-brand:hover {
+	color: var(--bs-white);
+}
+.circle-link {
+	font-family: "SourceCodePro-Bold";
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	background-color: var(--bs-gray-900);
+	border: 2px solid var(--bs-white);
+	text-align: center;
+	line-height: 50px;
+	text-decoration: none;	
+	font-weight: bold;
+}
+.circle-content {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 5px;
+}
+
+/*=======================================================================
+	02- Intro Section
+=======================================================================*/
+.intro {
+	display: table;
+	position: relative;
+	background: url("../img/intro-bg.webp") no-repeat center bottom;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	background-size: cover;
+	background-attachment: fixed;
+	height: auto;
+	min-height: 100vh;
+	text-align: center;
+}
+
+.intro .portada-container .row {
+	height: auto;
+	min-height: 100vh;
+}
+
+.getStarted a,
+a:active {
+	color: var(--color-bg-secondary);
+}
+
+.custom-button {
+	font-family: "SourceCodePro-Bold";
+	display: inline-block;
+	font-size: 1.4rem;
+	text-transform: uppercase;
+	letter-spacing: .3rem;
+	height: 5.4rem;
+	line-height: 5.4rem;
+	padding: .1em 3rem;
+	color: var(--color-bg-secondary);
+	text-decoration: none;
+	cursor: pointer;
+	text-align: center;
+	white-space: nowrap;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-webkit-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+	border: 2px solid var(--bs-gray-900);
+}
+
+.custom-button:hover {
+	background-color: var(--bs-gray-900);
+	color: white;
+}
+
+.intro ul li i {
+	font-size: 3rem;
+}
+
+.intro ul li a,
+.intro ul li a:visited {
+	color: var(--color-bg-secondary);
+	text-decoration: none;
+	font-size: 1.2rem;
+	font-weight: 500;
+}
+
+.intro ul li a:hover {
+	color: var(--bs-white);
+}
+
+@media only screen and (max-width:993px) {
+	.intro ul li i {
+		font-size: 2.5rem;
+	}
+}
+
+
+/*=======================================================================
+	03- About Section
+=======================================================================*/
+.about {
+	height: auto;
+	min-height: 100vh;
+}
+
+.about-container {
+	box-shadow: 0 0 10px #AAA;
+}
+
+/* CSS Barras de progreso */
+.circle-wrap {
+	width: 140px;
+	/* Cambiado a 140px */
+	height: 140px;
+	/* Cambiado a 140px */
+	background: #fefcff;
+	border-radius: 50%;
+	border: 1px solid #cdcbd0;
+}
+
+.circle-wrap .circle .mask,
+.circle-wrap .circle .fill {
+	width: 140px;
+	/* Cambiado a 140px */
+	height: 140px;
+	/* Cambiado a 140px */
+	position: absolute;
+	border-radius: 50%;
+}
+
+.circle-wrap .circle .mask {
+	clip: rect(0px, 140px, 140px, 70px);
+	/* Ajustado proporcionalmente */
+}
+
+.circle-wrap .inside-circle {
+	width: 114px;
+	/* Ajustado proporcionalmente */
+	height: 114px;
+	/* Ajustado proporcionalmente */
+	border-radius: 50%;
+	background: var(--bs-gray-900);
+	line-height: 112px;
+	/* Ajustado proporcionalmente */
+	text-align: center;
+	margin-top: 13px;
+	/* Ajustado proporcionalmente */
+	margin-left: 13px;
+	/* Ajustado proporcionalmente */
+	color: var(--bs-white);
+	position: absolute;
+	z-index: 100;
+	font-weight: 700;
+	font-size: 1.8em;
+	/* Ajustado proporcionalmente */
+}
+
+.mask .fill {
+	clip: rect(0px, 70px, 140px, 0px);
+	/* Ajustado proporcionalmente */
+	background-color: #f5b301;
+}
+
+
+.mask.full,
+.circle .fill {
+	animation: fill ease-in-out 2s;
+	transform: rotate(calc(var(--fill) * 180deg / 100));
+}
+
+@keyframes fill {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(calc(var(--fill) * 180deg / 100));
+	}
+}
+
+@media only screen and (max-width:768px) {
+	.circle-wrap {
+		width: 100px;
+		height: 100px;
+		/* Cambiado a 100px */
+		background: #fefcff;
+		border-radius: 50%;
+		border: 1px solid #cdcbd0;
+	}
+
+	.circle-wrap .circle .mask,
+	.circle-wrap .circle .fill {
+		width: 100px;
+		/* Cambiado a 100px */
+		height: 100px;
+		/* Cambiado a 100px */
+		position: absolute;
+		border-radius: 50%;
+	}
+
+	.circle-wrap .circle .mask {
+		clip: rect(0px, 100px, 100px, 50px);
+		/* Ajustado proporcionalmente */
+	}
+
+	.circle-wrap .inside-circle {
+		width: 82px;
+		/* Ajustado proporcionalmente */
+		height: 82px;
+		/* Ajustado proporcionalmente */
+		border-radius: 50%;
+		background: var(--bs-gray-900);
+		line-height: 80px;
+		/* Ajustado proporcionalmente */
+		text-align: center;
+		margin-top: 9px;
+		/* Ajustado proporcionalmente */
+		margin-left: 9px;
+		/* Ajustado proporcionalmente */
+		color: var(--bs-white);
+		position: absolute;
+		z-index: 100;
+		font-weight: 700;
+		font-size: 1.64em;
+		/* Ajustado proporcionalmente */
+	}
+
+	.mask .fill {
+		clip: rect(0px, 50px, 100px, 0px);
+		/* Ajustado proporcionalmente */
+		background-color: #f5b301;
+	}
+
+	#accessibility {
+		font-size: 0.8rem;
+	}
+}
+
+/*=======================================================================
+	04- Resume Section
+=======================================================================*/
+.resume {
+	height: auto;
+	min-height: 100vh;
+}
+
+#cv h3 a,
+#cv h3 a:active {
+	color: var(--bs-gray-900);
+}
+
+#cv h3 i:hover {
+	color: #f5b301;
+}
+
+.accordion-header:focus {
+	background-color: #f5b301 !important;
+}
+
+#cv .resume-timeline {
+	margin: 0 auto;
+	max-width: 980px;
+}
+
+#cv .timeline-wrap {
+	position: relative;
+	margin-top: 1.5rem;
+	margin-bottom: 6rem;
+}
+
+#cv .timeline-wrap::before {
+	content: "";
+	display: block;
+	width: 1px;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.1);
+	position: absolute;
+	left: 35%;
+	top: 0;
+}
+
+#cv .timeline-block {
+	position: relative;
+	padding-top: 1.5rem;
+}
+
+#cv .timeline-ico {
+	height: 4.8rem;
+	width: 4.8rem;
+	line-height: 4.8rem;
+	background: #313131;
+	border-radius: 50%;
+	text-align: center;
+	color: #FFFFFF;
+	position: absolute;
+	left: 35%;
+	top: .9rem;
+	margin-left: -2.4rem;
+}
+
+#cv .timeline-ico i {
+	position: relative;
+	left: .05rem;
+	top: .3rem;
+	font-size: 1.8em;
+}
+
+#cv .timeline-header {
+	float: left;
+	width: 35%;
+	padding-right: 90px;
+	text-align: right;
+}
+
+#cv .timeline-content {
+	margin-left: 35%;
+	padding-left: 60px;
+	text-align: left;
+}
+
+@media only screen and (max-width:1201px) {
+	#cv .timeline-wrap::before {
+		left: 2.4rem;
+	}
+
+	#cv .timeline-ico {
+		left: 2.4rem;
+	}
+
+	#cv .timeline-header {
+		float: none;
+		width: auto;
+		padding-right: 15px;
+		text-align: left;
+	}
+
+	#cv .timeline-wrap .timeline-header h5 {
+		font-size: 1rem;
+	}
+
+	#cv .timeline-wrap .timeline-content h5 {
+		font-size: 1rem;
+	}
+
+	#cv .timeline-wrap .timeline-header p {
+		font-size: 1rem;
+	}
+
+	#cv .timeline-wrap .timeline-content p {
+		font-size: 1rem;
+	}
+
+	#cv .timeline-content {
+		margin: 0;
+	}
+
+	#cv .timeline-content h5 {
+		padding-bottom: 0;
+		padding-top: 0.1rem;
+		margin-bottom: .6rem;
+		font-size: 1.2rem;
+	}
+
+	#cv .timeline-content h5::after {
+		bottom: auto;
+		top: 0;
+	}
+
+	#cv .timeline-header,
+	#cv .timeline-content {
+		padding-left: 6rem;
+	}
+}
+
+/*=======================================================================
+	05- Portfolio Section
+=======================================================================*/
+.portfolio {
+	height: auto;
+	min-height: 100vh;
+}
+
+.work-box {
+	margin-bottom: 3rem;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	background-color: #fff;
+	box-shadow: 0 0 5px #AAA;
+}
+
+.work-box:hover img {
+	transform: scale(1.3);
+}
+
+.work-img {
+	display: block;
+	overflow: hidden;
+}
+
+.work-img img {
+	transition: all 1s;
+}
+
+.work-content {
+	padding: 2rem 3% 1rem 4%;
+	text-align: left;
+}
+
+.work-content .w-more {
+	color: #4e4e4e;
+	font-size: 1rem;
+}
+
+.work-content .w-more .w-ctegory {
+	color: #0078ff;
+}
+
+.work-content .w-like {
+	font-size: 2.5rem;
+	color: #f5b301;
+	float: right;
+}
+
+.work-content .w-like a {
+	color: #f5b301;
+}
+
+.w-title {
+	font-size: 1.2rem;
+}
+
+/*=======================================================================
+	06- Contact Section
+=======================================================================*/
+.contact {
+	height: auto;
+	min-height: 100vh;
+}
+
+.contact-container {
+	height: auto;
+	box-shadow: 0 0 10px #AAA;
+}
+
+.contact-map iframe {
+	width: 100%;
+	height: 305px;
+	box-shadow: 0 0 10px #AAA;
+	border-radius: 10px;
+}
+
+.contact .socials {
+	width: 100%;
+	padding: 0;
+}
+
+.contact .socials ul {
+	position: relative;
+	width: 100%;
+	margin-left: -20px;
+}
+
+.contact .socials ul li {
+	font-size: 3em;
+}
+
+.contact .socials ul li a {
+	color: var(--color-black);
+}
+
+.contact .socials ul li a:hover {
+	color: var(--color-orange);
+}
+
+.php-email-form #error-message {
+	display: none;
+}
+
+.php-email-form #sent-message {
+	display: none;
+}
+
+#error-message p {
+	color: var(--color-bg-secondary);
+	border: 1px solid #ed1c0d;
+	border-radius: 3px;
+	background-color: #f09b95;
+	text-align: center;
+	padding: 15px;
+	font-weight: 600;
+}
+
+#sent-message p {
+	color: var(--color-bg-secondary);
+	border: 1px solid #18d26e;
+	border-radius: 3px;
+	background-color: #a9f3cb;
+	text-align: center;
+	padding: 15px;
+	font-weight: 600;
+}
+
+.php-email-form input,
+.php-email-form textarea {
+	border-radius: 0;
+	box-shadow: none;
+	font-size: 14px;
+	resize: none;
+}
+
+.php-email-form input:focus,
+.php-email-form textarea:focus {
+	border-color: #0078ff;
+}
+
+.php-email-form input {
+	padding: 10px 15px;
+}
+
+.php-email-form textarea {
+	padding: 12px 15px;
+	margin-bottom: 0;
+}
+
+.php-email-form .help-block ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+.contact-button {
+	font-family: "SourceCodePro-Regular";
+	display: inline-block;
+	font-size: 1.4rem;
+	text-transform: uppercase;
+	letter-spacing: .3rem;
+	height: 3.4rem;
+	padding: .2rem 1.2rem;
+	color: var(--bs-gray-900);
+	text-decoration: none;
+	cursor: pointer;
+	text-align: center;
+	white-space: nowrap;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-webkit-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+	border: none;
+	border-radius: 25px;
+	background-color: #f5b301;
+}
+
+.button-reset {
+	background-color: transparent;
+	border: 2px solid var(--bs-gray-900);
+}
+
+.contact-button:hover {
+	background-color: var(--bs-gray-900);
+	color: white;
+}
+
+@media only screen and (max-width:993px) {
+	.contact-both-sides {
+		display: flex;
+		flex-direction: column-reverse;
+		gap: 2rem;
+	}
+
+	.contact-buttons {
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+	}
+
+	.contact .socials ul li i {
+		font-size: 2em;
+	}
+}
+
+/*=======================================================================
+	07- Footer Section
+=======================================================================*/
+footer {
+	height: auto;
+	min-height: 100px;
+	padding: 0;
+	bottom: 0;
+	background-color: #1e222c;
+}
+
+footer .footer-container {
+	color: var(--bs-white);
+	height: auto;
+}
+
+footer a,
+footer a:visited {
+	color: var(--bs-white);
+	text-decoration: none;
+}
+
+footer a:hover {
+	color: #f5b301;
+}
+
+footer i {
+	font-size: 1.5em;
+}
+
+.footer-left {
+	min-height: 100px;
+}
+
+.footer-right {
+	min-height: 100px;
+}
+
+@media only screen and (max-width:993px) {
+
+	.footer-left {
+		text-align: center;
+		min-height: 50px;
+	}
+
+	.footer-right {
+		justify-content: center;
+		padding: 0;
+		margin: 0;
+		min-height: 50px;
+	}
+
+	.footer-right ul {
+		justify-content: center;
+		text-align: center;
+		padding: 0;
+		margin: 0;
+		margin-left: -1rem;
+	}
+}
+
+
+/*=======================================================================
+	08- Flecha Subir
+=======================================================================*/
+.arrow-top {
+	/* display: none; */
+	background-color: #1e222c;
+	cursor: pointer;
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	z-index: 2;
+	width: 70px;
+	height: 70px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.arrow-top i {
+	color: var(--bs-white);
+	font-size: 2em;
+}
+
+@media only screen and (max-width:1024px) {
+	.arrow-top {
+		width: 40px;
+		height: 40px;
+		opacity: 0.7;
+	}
+
+	.arrow-top i {
+		font-size: 2em;
+		margin: 15px;
+	}
+}
+
+@media only screen and (max-width:768px) {
+	.arrow-top {
+		width: 40px;
+		height: 40px;
+		opacity: 0.7;
+	}
+
+	.arrow-top i {
+		font-size: 2em;
+		margin: 15px;
+	}
+}

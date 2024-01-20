@@ -1,0 +1,739 @@
+@import url("fonts.css");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    scroll-behavior: smooth;
+    font-family: "Ubuntu-Regular";
+}
+
+.page-container {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.toogle-button {
+    display: none;
+    width: 100%;
+    height: 70px;
+    padding: 3%;
+    background-color: #000;
+    border-bottom: 2px solid #AAA;
+    cursor: pointer;
+}
+
+.toogle-button i {
+    font-size: 2.5em;
+}
+
+/* ========== Aside ========== */
+.page-container aside {
+    width: 20%;
+    left: 0;
+    height: 100vh;
+    position: fixed;
+    background-color: black;
+    color: #FFF;
+    padding-top: 15vh;
+    border-right: 2px solid #AAA;
+}
+
+aside a {
+    color: #FFF;
+    text-decoration: none;
+    margin-top: 5px;
+}
+
+aside a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+}
+
+.logo img {
+    width: 40%;
+}
+
+.logo h2 {
+    font-family: "BebasNeue-Regular";
+}
+
+.nav {
+    margin-top: 10%;
+}
+
+.nav a {
+    color: #928f8f;
+    text-decoration: none;
+    font-family: "BebasNeue-Regular";
+    font-size: 1.5em;
+}
+
+.social {
+    margin-top: 15%;
+}
+
+.social i {
+    font-size: 1.5em;
+    color: #fff;
+}
+
+.social i:hover {
+    color: #928f8f;
+}
+
+aside .copyright {
+    color: #928f8f;
+    margin-top: 1%;
+}
+
+.newsletter {
+    width: 75%;
+    margin: 0 auto;
+}
+
+.newsletter-label {
+    margin-top: 50px;
+    font-size: 1.5em;
+    color: #c4c1c1;
+    text-align: center;
+    font-family: "BebasNeue-Regular";
+}
+
+aside .newsletter input {
+    border: 1px solid #928f8f;
+    height: 40px;
+    color: #FFF;
+}
+
+aside .newsletter button {
+    border: 1px solid #928f8f;
+    height: 40px;
+    color: #FFF;
+}
+
+aside .newsletter input[type="email"]::placeholder {
+    font-size: .8em;
+    /* Elige el tamaño de fuente que desees para el placeholder */
+    color: #928f8f;
+}
+
+aside .newsletter input[type="email"]:focus {
+    background-color: transparent;
+    /* Fondo transparente al obtener el foco */
+    color: #FFF;
+}
+
+aside .newsletter button {
+    border: 1px solid #928f8f;
+    height: 40px;
+}
+
+/* ========== Main ========== */
+main {
+    position: relative;
+    width: 80%;
+    height: auto;
+    min-height: 100vh;
+    top: 0 !important;
+    margin-left: 20%;
+    background-color: #ffa500;
+    --s: 50px;
+    --c: #191b22;
+    --_s: calc(2*var(--s)) calc(2*var(--s));
+    --_g: 35.36% 35.36% at;
+    --_c: #0000 66%, #20222a 68% 70%, #0000 72%;
+    background:
+        radial-gradient(var(--_g) 100% 25%, var(--_c)) var(--s) var(--s)/var(--_s),
+        radial-gradient(var(--_g) 0 75%, var(--_c)) var(--s) var(--s)/var(--_s),
+        radial-gradient(var(--_g) 100% 25%, var(--_c)) 0 0/var(--_s),
+        radial-gradient(var(--_g) 0 75%, var(--_c)) 0 0/var(--_s),
+        repeating-conic-gradient(var(--c) 0 25%, #0000 0 50%) 0 0/var(--_s),
+        radial-gradient(var(--_c)) 0 calc(var(--s)/2)/var(--s) var(--s) var(--c);
+    background-attachment: fixed;
+}
+
+/* ========== Home ========== */
+.home {
+    margin: 0;
+    padding: 0;
+    height: 85vh;
+    margin: 5% auto;
+    border: 2px solid #111;
+    background-image: url('../img/bg-home.webp');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    box-shadow: 5px 5px 10px #111;
+}
+
+.home img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+
+.home-intro {
+    position: relative;
+    width: 55%;
+    height: 50%;
+    top: 30%;
+    left: 3%;
+    font-family: "Ubuntu-Regular";
+    color: #FFF;
+}
+
+.home-intro p {
+    font-size: 1.2em;
+    color: #c4c1c1;
+}
+
+.home-intro h2 {
+    font-family: "Ubuntu-Bold";
+    font-size: 3em;
+}
+
+.home-intro .botonPortfolio {
+    display: inline-block;
+    padding: 1em 2em;
+    background: #ffffff;
+    color: #080808;
+    border-radius: 2em;
+    border: 2px solid #ffffff;
+    font-family: "Ubuntu-Regular";
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+.home-intro .botonPortfolio:hover {
+    background: #000000;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+}
+
+.home-intro .botonContactar {
+    display: inline-block;
+    padding: 1em 2em;
+    background: transparent;
+    color: #FFF;
+    border-radius: 2em;
+    border: 2px solid #ffffff;
+    font-family: "Ubuntu-Regular";
+    margin-left: 2%;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+.home-intro .botonContactar:hover {
+    background: #ffffff;
+    color: #000000;
+    border: 2px solid #ffffff;
+}
+
+/* ========== About ========== */
+.about {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    margin: 5% auto;
+}
+
+.about h1 {
+    font-family: "BebasNeue-Regular";
+    font-size: 2em;
+    color: #FFF;
+}
+
+.about p {
+    font-family: "Ubuntu-Regular";
+    font-size: 1em;
+    color: #928f8f;
+}
+
+.about span {
+    font-family: "Ubuntu-Regular";
+    font-size: 1em;
+    color: #928f8f;
+}
+
+.about-text {
+    width: 100%;
+    height: 100%;
+}
+
+.about-text hr {
+    width: 100%;
+    color: #CCC;
+}
+
+.about-text i {
+    font-size: 2.2em;
+}
+
+.about-image {
+    width: 100%;
+    height: 100%;
+}
+
+.about-image img {
+    width: 75%;
+    border: 2px solid #000;
+    box-shadow: 20px 20px 1px rgba(200, 200, 200, .7);
+    margin-bottom: 12%;
+}
+
+.about-contain {
+    width: 100%;
+    margin-top: 30%;
+}
+
+p .firma-autor {
+    font-family: "Ubuntu-Bold";
+    font-size: 1.2em;
+    color: #FFF;
+}
+
+p .firma-founder {
+    font-family: "Ubuntu-Regular";
+    font-size: 1em;
+    color: #928f8f;
+}
+
+/* ========== Gallery ========== */
+.gallery {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100vh;
+    height: 40%;
+}
+
+.gallery h1 {
+    font-family: "BebasNeue-Regular";
+    font-size: 2em;
+    color: #FFF;
+}
+
+.gallery h5 {
+    font-family: "Ubuntu-Bold";
+    font-size: 1.5em;
+    color: #FFF;
+    margin-top: 40%;
+}
+
+.gallery p {
+    font-family: "Ubuntu-Regular";
+    font-size: 1em;
+    color: #928f8f;
+}
+
+.gallery hr {
+    width: 100%;
+    color: #CCC;
+}
+
+.gallery-container {
+    width: 100%;
+    height: auto;
+}
+
+.images-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    width: 100%;
+    height: 100%;
+    margin-top: 5%;
+    gap: 0;
+}
+
+.image-container {
+    position: relative;
+    overflow: hidden;
+    height: 300px;
+    margin: 0 20px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    /* Sombra negra */
+    border: 1px solid #CCC;
+}
+
+.image-container img {
+    transition: transform 1s ease-in-out;
+}
+
+.image-container:hover img {
+    transform: scale(1.2);
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(1);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.overlay:hover {
+    opacity: 1;
+}
+
+.overlay-lupa {
+    font-family: "Ubuntu-Bold";
+    color: #fff;
+    text-align: center;
+    font-size: 4em;
+    opacity: 0.6;
+}
+
+.overlay span.tag {
+    font-family: "Ubuntu-Bold";
+    text-transform: uppercase;
+    color: #FFF;
+    text-align: center;
+    font-size: 1em;
+}
+
+/* ========== Contact ========== */
+.contact {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+.contact h1 {
+    font-family: "BebasNeue-Regular";
+    font-size: 2em;
+    color: #FFF;
+}
+
+.contact h5 {
+    font-family: "Ubuntu-Bold";
+    font-size: 1.5em;
+    color: #FFF;
+    margin-top: 40%;
+}
+
+.contact p {
+    font-family: "Ubuntu-Regular";
+    font-size: 1em;
+    color: #928f8f;
+}
+
+.contact hr {
+    width: 100%;
+    color: #CCC;
+}
+
+.contact-info {
+    width: 70%;
+    height: 40px;
+}
+
+.contact-icon {
+    width: 60px;
+    height: 50px;
+    background-color: #928f8f;
+}
+
+.contact-info-text {
+    width: 100%;
+    height: 50px;
+}
+
+.contact-icon i {
+    font-size: 2em;
+}
+
+p .info-uno {
+    font-family: "Ubuntu-Bold";
+    font-size: 1.1em;
+    color: #fff;
+}
+
+p .info-dos {
+    font-family: "Ubuntu-Regular";
+    font-size: 1em;
+    color: #928f8f;
+}
+
+.contact-form {
+    width: 100%;
+    height: 100%;
+    background-color: #ffa500;
+}
+
+.form-container {
+    width: 75%;
+    height: 600px;
+    border: 2px solid #121318;
+    box-shadow: 20px 20px 1px rgba(200, 200, 200, .7);
+    background-color: #101114;
+    padding: 5%;
+}
+
+.form-container h2 {
+    font-family: "Ubuntu-Bold";
+    font-size: 1.5em;
+    color: #FFF;
+    margin-left: 18px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input[type="email"],
+input[type="text"] {
+    width: 90%;
+    border: none;
+    border-bottom: 1px solid #CCC;
+    background: transparent;
+    padding: 5px;
+    margin: 10px 0;
+    color: #FFF;
+}
+
+textarea {
+    width: 90%;
+    height: 200px;
+    border: none;
+    border-bottom: 1px solid #CCC;
+    background: transparent;
+    padding: 5px;
+    margin: 10px 0;
+    resize: none;
+    color: #FFF;
+}
+
+input[type="email"]::placeholder,
+input[type="text"]::placeholder,
+textarea::placeholder {
+    color: #928f8f;
+}
+
+button[type="submit"] {
+    background: #333;
+    border: 1px solid black;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    width: 50%;
+    margin-top: 10px;
+    margin-right: 18px;
+    align-self: flex-end;
+}
+
+button[type="submit"]:hover {
+    background: #555;
+}
+
+/* ========== Footer ========== */
+footer {
+    width: 100%;
+    height: 120px;
+    bottom: 0;
+    border-top: 1px solid #616161;
+    background-color: #AAA;
+}
+
+footer p {
+    font-family: "BebasNeue-Regular";
+    font-size: 1.5em;
+    color: #000;
+    margin-top: 20px;
+}
+
+/* Media query para dispositivos tables */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+
+}
+
+/* Media query para dispositivos móviles */
+@media only screen and (max-width: 767px) {
+    .page-container aside {
+        display: none !important;
+    }
+
+    .toogle-button {      
+        display: block;
+        position: fixed;
+        top: 0;
+        z-index: 999;
+    }
+
+    main {
+        width: 100%;
+        margin-left: 0px;
+    }
+
+    .home {
+        padding: 2%;
+        height: 110vh;
+    }
+
+    .home-intro {
+        width: 100%;
+        top: 7%;
+    }
+
+    .home-intro h2 {
+        width: 100%;
+        margin-bottom: 50%;
+        font-size: 2.5em;
+    }
+
+    .home-intro p {
+        width: 65%;
+    }
+
+    .home-intro .botonPortfolio {
+        padding: .8em 1em;
+        font-size: 1.2em;
+        margin-bottom: 10px;
+    }
+
+    .home-intro .botonContactar {
+        padding: .8em 1em;
+        font-size: 1.2em;
+    }
+
+    .about-mobile {
+        width: 100%;
+        height: auto !important;
+        display: flex;
+        flex-direction: column;
+        margin-top: 70px;
+    }
+
+    .about-contain {
+        width: 100%;
+        margin-top: 10%;
+    }
+
+    .about-image {
+        margin-top: 10%;
+    }
+
+    .about-image img {
+        width: 100%;
+    }
+
+    .gallery {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        margin-top: 700px;
+        padding-top: 50px;
+    }
+
+    .gallery-container {
+        width: 100%;
+    }
+
+    .images-container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .image-container {
+        width: 100%;
+        margin: 10px;
+    }
+
+    .contact  {
+        width: 100%;
+        height: auto !important;
+        padding-top: 12%;
+    }
+
+    .contact .row {
+        width: 100%;
+        height: auto !important;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contact .row .col {
+        width: 100%;
+        height: auto !important;
+    }
+
+    .contact h5 {
+        margin-top: 10%;
+    }
+
+    .form-container {
+        width: 100%;
+        margin-top: 20%;
+    }
+
+    .contact-info {
+        width: 100%;
+        height: 60px;
+    }
+    
+    .contact-icon {
+        width: 60px;
+        height: 60px;
+        background-color: #928f8f;
+    }
+    
+    .contact-info-text {
+        width: 100%;
+        height: 60px;
+    }
+    
+    .contact-icon i {
+        font-size: 2em;
+    }
+
+    footer {
+        bottom: 0 !important;
+        text-align: center;
+        font-size: .8em;
+    }
+
+}
+
+/* CSS para la versión móvil en horizontal */
+@media only screen and (max-width: 1024px) and (orientation: landscape) {
+    .page-container aside {
+        display: none !important;
+    }
+
+    main {
+        width: 100%;
+        margin-left: 0px;
+    }
+}

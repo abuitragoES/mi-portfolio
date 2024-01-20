@@ -1,0 +1,327 @@
+/* Fuentes del proyecto */
+@font-face {
+    font-family: "Kanit-Light";
+    src: url("../fonts/Kanit-Light.ttf");
+}
+
+@font-face {
+    font-family: "Kanit-Regular";
+    src: url("../fonts/Kanit-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Kanit-Bold";
+    src: url("../fonts/Kanit-Bold.ttf");
+}
+
+/* Estilos de las etiquetas generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-family: "Kanit-Regular";
+    background-color: var(--bs-primary);
+}
+
+header {
+    background-color: var(--bs-primary);
+}
+
+main {
+    margin-top: 135px;
+}
+
+hr {
+    background-color: var(--bs-white);
+    width: 97%;
+    height: 2px;
+    border: none;
+    opacity: 1;
+}
+
+/* Estilos del HEADER */
+header .logo {
+    font-size: 2.5em;
+    color: var(--bs-white);
+}
+
+.topRow {
+    height: 80px;
+}
+
+.logo img {
+    height: 60px;
+}
+
+.logo a,
+.logo a:active {
+    color: var(--bs-white);
+    text-decoration: none;
+}
+
+.carrito a,
+.carrito a:active {
+    color: var(--bs-white);
+    text-decoration: none;
+}
+
+.carrito a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos del NAV */
+.menuRow {
+    background-color: var(--bs-gray-400);
+    border-bottom: 2px solid var(--bs-gray-800);
+}
+
+.menuRow a,
+.menuRow a:active {
+    color: var(--bs-black);
+    text-decoration: none;
+}
+
+.menuRow a:hover {
+    color: var(--bs-black);
+}
+
+.dropdown-menu {
+    background-color: var(--bs-gray-400);
+}
+
+nav .navbar-collapse i {
+    color: var(--bs-black);
+    cursor: pointer;
+}
+
+/* Estilos del Carrusel de la portada */
+.ofertas-portada {
+    border-bottom: 2px solid var(--bs-gray-800);
+}
+
+.carousel-inner img {
+    height: 450px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.bannerOne {
+    width: 50%;
+    margin: 0 auto;
+    background-color: var(--bs-success);
+    color: var(--bs-white);
+    border-radius: 10px;
+    border: 2px solid var(--bs-black);
+    opacity: 0.8;
+    box-shadow: 2px 4px 5px var(--bs-black);
+}
+
+.bannerTwo {
+    width: 50%;
+    margin: 0 auto;
+    background-color: var(--bs-gray-400);
+    color: var(--bs-black);
+    border-radius: 10px;
+    border: 2px solid var(--bs-white);
+    opacity: 0.8;
+    box-shadow: 2px 4px 5px var(--bs-black);
+}
+
+.bannerThree {
+    width: 50%;
+    margin: 0 auto;
+    background-color: var(--bs-primary);
+    color: var(--bs-white);
+    border-radius: 10px;
+    border: 2px solid var(--bs-white);
+    opacity: 0.8;
+    box-shadow: 2px 4px 5px var(--bs-black);
+}
+
+.carouselPortada button {
+    background-color: var(--bs-black);
+    opacity: 0.4;
+}
+
+.carouselPortada button:hover {
+    background-color: var(--bs-black);
+    opacity: 0.4;
+}
+
+.carouselPortada button:focus {
+    background-color: var(--bs-black);
+    opacity: 0.4;
+}
+
+/* Estilos de las ofertas de portada */
+.black-friday {
+    width: 75%;
+}
+
+.sales img {
+    border-radius: 10px;
+    border: 5px solid var(--bs-white);
+}
+
+.sales img:hover {
+    filter: grayscale(1);
+}
+
+@media screen and (max-width: 992px) {
+    .black-friday {
+        width: 100%;
+    }
+}
+
+/* Estilos de los carruseles de videojuegos */
+.owl-carouselRecientes .item {
+    width: 100%;
+}
+
+.owl-carouselRecomendados .item  {
+    width: 100%;
+}
+
+.proximosLanzamientos  {
+    width: 100%;
+}
+
+.precio {
+    font-size: 1.5em;
+    color: var(--bs-danger);
+}
+
+.card img {
+    height: 200px;
+}
+
+.card .card-body .btn {
+    float: right;
+}
+
+/* Estilos para las flechas de navegación del Owl Carousel */
+.custom-navRecientes {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.custom-navRecomendados {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.owl-prevRecientes,
+.owl-nextRecientes {
+  background-color: #3498db; 
+  color: #fff; 
+  padding: 10px 15px; 
+  border-radius: 5px; 
+}
+
+.owl-prevRecientes:hover,
+.owl-nextRecientes:hover {
+  background-color: var(--bs-white);
+  color: var(--bs-black); 
+}
+
+.owl-prevRecommended,
+.owl-nextRecommended {
+  background-color: #3498db; 
+  color: #fff; 
+  padding: 10px 15px; 
+  border-radius: 5px; 
+}
+
+.owl-prevRecommended:hover,
+.owl-nextRecommended:hover {
+  background-color: var(--bs-white);
+  color: var(--bs-black); 
+}
+
+@media screen and (max-width: 992px) {
+    .owl-carouselRecientes .item  {
+        margin: 2em 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .owl-carouselRecomendados .item  {
+        margin: 2em 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .proximosLanzamientos {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 93%;
+        flex-wrap: wrap;
+        margin-left: 7%;
+        gap: 50px;
+    }
+}
+
+/* Estilos del Footer */
+footer {
+    color: var(--bs-white)
+}
+
+footer a, footer a:active {
+    color: var(--bs-white);
+    text-decoration: none;
+    font-family: "Kanit-Light";
+}
+
+footer a:hover {
+    color: var(--bs-warning);
+}
+
+footer .footerRowOne img {
+    width: 5%;
+}
+
+footer .footerRowTwo img {
+    width: 75%;
+    margin-bottom: 10px;
+}
+
+.footerSeparator {
+    display: none;
+    background-color: var(--bs-white);
+    height: 2px;
+    width: 80%;
+}
+
+@media screen and (max-width: 992px) {
+    .footer-contain {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer-contain .col {
+        width: 100%;
+        text-align: center;
+    }
+
+    .footerSeparator {
+        display: block;
+        margin: 2em;
+    }
+
+    footer .footerRowTwo img, svg {
+        width: 30%;
+        margin-bottom: 10px;
+    }
+
+    footer .footerRowOne img, svg {
+        width: 50px;
+    }
+}
